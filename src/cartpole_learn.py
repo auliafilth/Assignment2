@@ -67,7 +67,7 @@ def apply_controller(plant,params,H,policy=None):
         #  get command from policy (this should be fast, or at least account for delays in processing):
         u_t = policy(x_t_)
        
-	 #  send command to robot:
+        #  send command to robot:
         plant.apply_control(u_t)
         plant.step()
         x_t, t = plant.get_plant_state()
