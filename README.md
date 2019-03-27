@@ -28,11 +28,10 @@ You only have to add code to one file: src/cartpole_learn.py. Except for paramet
 
 1. Implement well-tuned PID control to stabilize the pendulum at the top
   1. Try both manual gain search and Ziegler-Nicols. Could you find K ultimate?
-  2. The code computes a sum_of_error each episode. This can provide feedback for a more adaptive gain tuning algorithm. Implement twiddle, or another learning approach of your choice to find gains that beat your hand-tuned choices.
+  2. The code computes a sum_of_error each episode. This can provide feedback for a more adaptive gain tuning algorithm. 
 2. Connect the system to an LQR library that solves for the approximately optimal balancing controller near the goal. (Does LQR beat your hand-tuned PID?) 
-3. Implement dynamics model learning to be able to predict the outcome of a series of actions over time.
 
-## Hints and Information:
+## Life Enrichment
 
-Line 38 of cartpole.py controls the initial state. Change the 4th value to 0 in order to try the swing-up task, or add random sampling to have it start from a different spot in each episode.
+Only if you're done all the other work for this class - can you implement a controller to swing-up the pendulum from hanging downwards? To try that, look at line 38 of cartpole.py controls the initial state. Change the 4th value to 0 in order to try the swing-up task, or add random sampling to have it start from a different spot in each episode.
 
